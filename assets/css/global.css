@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+html,
+body {
+  height: 100%;
+}
+
+.cabecalho {
+  background-color: #0a2770;
+  font-family: "Inter", sans-serif;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  /* max-height: 65%; */
+}
+
+/* .cabecalho img {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
+     -ms-filter: grayscale(100%);
+         filter: grayscale(100%); 
+} */
+
+.btn-logar {
+  border-radius: 30px;
+  width: 160.44px;
+  height: 59.2px;
+  font-size: 25px;
+  color: #0a2770;
+}
+
+.titulo {
+  color:black;
+  font-weight: 700;
+  font-size: 3vw;
+  font-family: "Inter", sans-serif;
+  letter-spacing: -2.8px;
+}
+
+.texto-info {
+  color: #0a2770;
+  font-weight: 300;
+  font-size: 2rem;
+  font-family: "Inter", sans-serif;
+}
+
+.modal-login {
+  border-radius: 15px !important;
+  height: 100%;
+  font-family: "inter", sans-serif;
+  background-color: #f1f5f9;
+}
+.nav-tabs {
+  border-bottom: 0px solid transparent;
+  color: black;
+}
+
+.nav-tabs .nav-link {
+  position: relative;
+  margin-bottom: -1px;
+  border-radius: 0.25rem 0.25rem 0 0;
+  background-color: transparent;
+  border: 0px solid transparent;
+  border-bottom: 2px solid #b4bbc3;
+  color: black;
+}
+
+.nav-tabs .nav-link > i {
+  color: rgba(10, 39, 112, 0.5);
+}
+
+.nav-tabs .active > i {
+  color: #0a2770;
+}
+
+.nav-tabs .nav-link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: transparent;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+}
+
+.nav-tabs .nav-link.active::after {
+  background-color: black;
+  height: 3px;
+}
+
+.nav-item .active {
+  font-weight: 800;
+  background-color: transparent !important;
+}
+
+.modal-header,
+.modal-body {
+  border-bottom: none;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* width: 50%; */
+}
+
+.input-container > input {
+  padding-left: 40px;
+  height: 60px;
+  border-radius: 30px;
+  box-shadow: none !important;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+}
+
+.btn-entrar {
+  height: 60px;
+  border-radius: 30px;
+  box-shadow: none !important;
+  background-color: #0a2770;
+  color: white;
+  font-weight: bold;
+}
+
+.btn-entrar:hover {
+  height: 60px;
+  border-radius: 30px;
+  box-shadow: none !important;
+  background-color: #0a1e53;
+  color: white;
+  font-weight: bold;
+}
+
+.btn-cadastrar {
+  height: 60px;
+  border-radius: 30px;
+  box-shadow: none !important;
+  background-color: rgba(10, 39, 112, 0.5);
+  color: white;
+  font-weight: bold;
+}
+
+.btn-cadastrar:hover {
+  height: 60px;
+  border-radius: 30px;
+  box-shadow: none !important;
+  background-color: rgba(15, 36, 90, 0.669);
+  color: white;
+  font-weight: bold;
+}
+
+.esqueci-senha {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.53);
+  font-weight: normal;
+  font-size: 16px;
+}
