@@ -12,216 +12,315 @@
     <link rel="stylesheet" href="assets/css/global.css" />
   </head>
   <body>
-    <header>
-      <!-- Navbar -->
-      <nav class="navbar row cabecalho">
-        <div class="col-4"></div>
-        <div class="col-4 d-flex justify-content-center">
-          <a class="" href="https://institutoagregar.org.br/pt">
-            <img
-              src="assets/img/instituto-agregar.png"
-              class="d-inline-block align-top logo"
-              alt="Instituto Agregar"
-            />
-          </a>
-        </div>
-        <div class="col-4 d-flex justify-content-end">
-          <button
-            type="button"
-            class="btn btn-light btn-logar me-4"
-            data-bs-toggle="modal"
-            data-bs-target="#modal-login"
-          >
-            Entrar
-          </button>
-        </div>
-      </nav>
-
-      <!-- Modal de Login -->
-      <div
-        class="modal fade modal-lg"
-        id="modal-login"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="modal-login"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content modal-login">
-            <div class="modal-header">
+    <div class="wrapper bg-light">
+      <header>
+        <!-- Navbar -->
+        <nav class="navbar cabecalho d-flex justify-content-center">
+          <div class="container row">
+            <div class="col-6 d-flex justify-content-start">
+              <a class="" href="https://institutoagregar.org.br/pt">
+                <img
+                  src="/assets/img/gateway_logo_branco.png"
+                  class="d-inline-block align-top logo"
+                  alt="gateway__"
+                />
+              </a>
+            </div>
+            <div class="col-6 d-flex justify-content-end">
               <button
                 type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
+                class="btn btn-light btn-logar me-4"
+                data-bs-toggle="modal"
+                data-bs-target="#modal-login"
+              >
+                Entrar
+              </button>
             </div>
-            <div class="modal-body">
-              <div class="d-flex justify-content-center w-100">
-                <ul class="nav nav-tabs b-0" id="myTab" role="tablist">
-                  <li class="nav-item" role="presentation">
-                    <button
-                      class="nav-link active"
-                      id="empresa-tab"
-                      data-bs-toggle="tab"
-                      data-bs-target="#empresa"
-                      type="button"
-                      role="tab"
-                      aria-controls="empresa"
-                      aria-selected="true"
-                    >
-                      <i class="fa-solid fa-industry me-2"></i>Empresa
-                    </button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button
-                      class="nav-link"
-                      id="ict-tab"
-                      data-bs-toggle="tab"
-                      data-bs-target="#ict"
-                      type="button"
-                      role="tab"
-                      aria-controls="ict"
-                      aria-selected="false"
-                    >
-                      <i class="fa-solid fa-graduation-cap me-2"></i>Instituição
-                    </button>
-                  </li>
-                </ul>
-              </div>
+          </div>
+        </nav>
 
-              <div class="d-flex justify-content-center">
-                <form class="mt-5">
-                  <div class="mb-3 input-container">
-                    <i class="input-icon fa-solid fa-user"></i>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="userLogin"
-                      aria-describedby="login"
-                      placeholder="Login"
-                    />
-                  </div>
-                  <div class="mb-3 input-container">
-                    <i class="input-icon fa-solid fa-lock"></i>
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="userPassword"
-                      aria-describedby="password"
-                      placeholder="Senha"
-                    />
-                  </div>
-                  <div class="mb-3 input-container">
-                    <button type="submit" class="btn btn-entrar w-100">
-                      Entrar
-                    </button>
-                  </div>
-                  <div class="mb-3 input-container">
-                    <button type="button" class="btn btn-cadastrar w-100">
-                      Cadastre-se
-                    </button>
-                  </div>
-                  <div
-                    class="mb-3 input-container d-flex justify-content-center"
-                  >
-                    <p>
-                      <u
-                        ><a href="#" class="esqueci-senha"
-                          >Esqueci minha senha</a
-                        ></u
+        <!-- Modal de Login -->
+        <div
+          class="modal fade modal-lg"
+          id="modal-login"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="modal-login"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-login">
+              <div class="modal-header">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="d-flex justify-content-center w-100">
+                  <ul class="nav nav-tabs b-0" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link active"
+                        id="empresa-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#empresa"
+                        type="button"
+                        role="tab"
+                        aria-controls="empresa"
+                        aria-selected="true"
                       >
+                        <i class="fa-solid fa-industry me-2"></i>Empresa
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="ict-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#ict"
+                        type="button"
+                        role="tab"
+                        aria-controls="ict"
+                        aria-selected="false"
+                      >
+                        <i class="fa-solid fa-graduation-cap me-2"></i>Instituição
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                  <form class="mt-5">
+                    <div class="mb-3 input-container">
+                      <i class="input-icon fa-solid fa-user"></i>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="userLogin"
+                        aria-describedby="login"
+                        placeholder="Login"
+                      />
+                    </div>
+                    <div class="mb-3 input-container">
+                      <i class="input-icon fa-solid fa-lock"></i>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="userPassword"
+                        aria-describedby="password"
+                        placeholder="Senha"
+                      />
+                    </div>
+                    <div class="mb-3 input-container">
+                      <button type="submit" class="btn btn-entrar w-100">
+                        Entrar
+                      </button>
+                    </div>
+                    <div class="mb-3 input-container">
+                      <button type="button" class="btn btn-cadastrar w-100">
+                        Cadastre-se
+                      </button>
+                    </div>
+                    <div
+                      class="mb-3 input-container d-flex justify-content-center"
+                    >
+                      <p>
+                        <u
+                          ><a href="#" class="esqueci-senha"
+                            >Esqueci minha senha</a
+                          ></u
+                        >
+                      </p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="bg-light">
+        <div class="container">
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-lg-6 col-sm-12 d-flex justify-content-center">
+              <p class="titulo">Ideias que transformam, parcerias que evoluem</p>
+            </div>
+            <div class="col-lg-6 col-sm-12 d-flex justify-content-center">
+              <img
+                class="flat-home"
+                src="assets/img/mulheres-trabalhando.png"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="accordion" id="accordionHome">
+              <!-- 1º Accordion  -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingUm">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseUm"
+                    aria-expanded="true"
+                    aria-controls="collapseUm"
+                  >
+                    <span class="texto-info">O Portal de Projetos é...</span>
+                  </button>
+                </h2>
+                <div
+                  id="collapseUm"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingUm"
+                  data-bs-parent="#accordionHome"
+                >
+                  <div class="accordion-body">
+                    O |Portal de Projetos| é um instrumento que visa unir as demandas das empresas à instituições que possam supri-las
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2º Accordion  -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingDois">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseDois"
+                    aria-expanded="false"
+                    aria-controls="collapseDois"
+                  >
+                    <span class="texto-info">
+                      Você conhece os níveis de maturidade da produção de projetos?
+                    </span>
+                  </button>
+                </h2>
+                <div
+                  id="collapseDois"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingDois"
+                  data-bs-parent="#accordionHome"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      <strong>Technology Readiness Level</strong> é uma forma de caracterizar o nível de desenvolvimento de uma tecnologia, partindo da pesquisa teórica dos processos e evoluindo até a construção de um Produto Mínimo Viável.
+                    </p>
+                    <p>
+                      O <strong>[portal de projetos]</strong> utiliza níveis simplificados da TRL para auxiliar a compreensão do usuário ao que está sendo requirido pelas empresas. Resumimos os processos a três grandes níveis:
+                    </p>
+                    <p>
+                      <strong>1. A Teoria</strong> - abordando as documentações e teorias que aprovam e demonstram a viabilidade da tecnologia.
+                    </p>
+                    <p>
+                      <strong>2. O Protótipo</strong> - A construção de um produto em menor escala, que demonstra as funcionalidades e aplicações.
+                    </p>
+                    <p>
+                      <strong>3. O Produto Mínimo Viável</strong> - O desenvolvimento final da tecnologia, pronto para ser aplicado pela empresa solicitante.
                     </p>
                   </div>
-                </form>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <main class="bg-light">
-      <div class="container">
-        <div class="row d-flex justify-content-center align-items-center">
-          <div class="col-6 d-flex justify-content-center">
-            <p class="titulo">Ideias que transformam, <span>parcerias que evoluem</span></p>
-          </div>
-          <div class="col-6 d-flex justify-content-center">
-            <img src="assets/img/connection-flat-illustration.png" alt="" />
-          </div>
-        </div>
-
-        <div class="row">
-          <!-- <div class="col-12 h-50">
-            <p class="texto-info">O Portal de Projetos é...</p>
-          </div> -->
-          <div class="accordion" id="accordionHome">
-            <div class="accordion-item">
-              <!-- 1º Accordion  -->
-              <h2 class="accordion-header" id="headingOne">
-                <button
-                  class="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne"
-                  aria-expanded="true"
-                  aria-controls="collapseOne"
+            
+              <!-- 3º Accordion  -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTres">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTres"
+                    aria-expanded="false"
+                    aria-controls="collapseTres"
+                  >
+                    <span class="texto-info">
+                      O Índice de maturidade (ACATECH)
+                    </span>
+                  </button>
+                </h2>
+                <div
+                  id="collapseTres"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTres"
+                  data-bs-parent="#accordionHome"
                 >
-                  <p class="texto-info">O Portal de Projetos é...</p>
-                </button>
-              </h2>
-              <div
-                id="collapseOne"
-                class="accordion-collapse collapse show"
-                aria-labelledby="headingOne"
-                data-bs-parent="#accordionHome"
-              >
-                <div class="accordion-body">
-                  O |Portal de Projetos| é um instrumento que visa unir as
-                  demandas das empresas à instituições que possam supri-las
+                  <div class="accordion-body">
+                    <p>
+                      <strong>Technology Readiness Level</strong> é uma forma de caracterizar o nível de desenvolvimento de uma tecnologia, partindo da pesquisa teórica dos processos e evoluindo até a construção de um Produto Mínimo Viável.
+                    </p>
+                    <p>
+                      O <strong>[portal de projetos]</strong> utiliza níveis simplificados da TRL para auxiliar a compreensão do usuário ao que está sendo requirido pelas empresas. Resumimos os processos a três grandes níveis:
+                    </p>
+                    <p>
+                      <strong>1. A Teoria</strong> - abordando as documentações e teorias que aprovam e demonstram a viabilidade da tecnologia.
+                    </p>
+                    <p>
+                      <strong>2. O Protótipo</strong> - A construção de um produto em menor escala, que demonstra as funcionalidades e aplicações.
+                    </p>
+                    <p>
+                      <strong>3. O Produto Mínimo Viável</strong> - O desenvolvimento final da tecnologia, pronto para ser aplicado pela empresa solicitante.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-            <!-- 2º Accordion  -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button
-                  class="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne"
-                  aria-expanded="true"
-                  aria-controls="collapseOne"
-                >
-                  <p class="texto-info">
-                    Você conhece os níveis de maturidade da produção de
-                    projetos?
-                  </p>
-                </button>
-              </h2>
-              <div
-                id="collapseOne"
-                class="accordion-collapse collapse"
-                aria-labelledby="headingOne"
-                data-bs-parent="#accordionHome"
-              >
-                <div class="accordion-body">
-                  <p>
-                    <strong>Technology Readiness Level</strong> é uma forma de
-                    caracterizar o nível de desenvolvimento de uma tecnologia,
-                    partindo da pesquisa teórica dos processos e evoluindo até a
-                    construção de um Produto Mínimo Viável.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+            
         </div>
-      </div>
-    </main>
+      </main>
+      
+      <footer class="text-center mt-5 bg-light">
+        <hr>
+        <div class="container pt-4">
+          <section class="mb-4">
+            
+            <a
+              data-mdb-ripple-init
+              class="btn btn-link btn-floating btn-lg text-body m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+      
+            <a
+              data-mdb-ripple-init
+              class="btn btn-link btn-floating btn-lg text-body m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-twitter"></i
+            ></a>
 
-    <footer></footer>
+            <a
+              data-mdb-ripple-init
+              class="btn btn-link btn-floating btn-lg text-body m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-instagram"></i
+            ></a>
+      
+            <a
+              data-mdb-ripple-init
+              class="btn btn-link btn-floating btn-lg text-body m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+        </div>
+
+        <div class="text-center p-3 down-footer text-light">
+          © 2024 Copyright:
+          <a class="" href="#">Gateway</a>
+      </footer>  
+    </div>
 
     <script src="assets/bootstrap/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
     <script src="assets/jquery/jquery-3.7.1.min.js"></script>

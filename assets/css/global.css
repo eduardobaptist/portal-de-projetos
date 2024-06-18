@@ -37,7 +37,7 @@ span{
 }
 
 .titulo {
-  color:black;
+  color: black;
   font-weight: 700;
   font-size: 3vw;
   font-family: "Inter", sans-serif;
@@ -49,6 +49,11 @@ span{
   font-weight: 300;
   font-size: 2rem;
   font-family: "Inter", sans-serif;
+}
+
+.flat-home {
+  width: 100%;
+  height: auto;
 }
 
 .modal-login {
@@ -166,4 +171,14 @@ span{
   color: rgba(0, 0, 0, 0.53);
   font-weight: normal;
   font-size: 16px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.down-footer {
+  background-color: #0a2770;
 }
