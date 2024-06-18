@@ -28,13 +28,22 @@ span{
          filter: grayscale(100%); 
 } */
 
-.btn-logar {
+.btn-clique_aqui {
   border-radius: 30px;
   width: 160.44px;
   height: 59.2px;
   font-size: 25px;
-  color: #0a2770;
+  color: #ffffff;
+  background-color: #0a1e53;
 }
+.btn-clique_aqui:hover {
+    border-radius: 30px;
+    width: 160.44px;
+    height: 59.2px;
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #0044ff;
+  }
 
 .titulo {
   color:black;
@@ -130,7 +139,7 @@ span{
   border-radius: 30px;
   box-shadow: none !important;
   background-color: #0a2770;
-  color: white;
+  color: #133db1;
   font-weight: bold;
 }
 
@@ -139,8 +148,7 @@ span{
   border-radius: 30px;
   box-shadow: none !important;
   background-color: #0a1e53;
-  color: white;
-  font-weight: bold;
+  color: #133db1
 }
 
 .btn-cadastrar {
