@@ -16,6 +16,10 @@ body {
   /* max-height: 65%; */
 }
 
+span{
+ color: #133db1;
+}
+
 /* .cabecalho img {
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
@@ -24,16 +28,25 @@ body {
          filter: grayscale(100%); 
 } */
 
-.btn-logar {
+.btn-clique_aqui {
   border-radius: 30px;
   width: 160.44px;
   height: 59.2px;
   font-size: 25px;
-  color: #0a2770;
+  color: #ffffff;
+  background-color: #0a1e53;
 }
+.btn-clique_aqui:hover {
+    border-radius: 30px;
+    width: 160.44px;
+    height: 59.2px;
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #0044ff;
+  }
 
 .titulo {
-  color: black;
+  color:black;
   font-weight: 700;
   font-size: 3vw;
   font-family: "Inter", sans-serif;
@@ -45,11 +58,6 @@ body {
   font-weight: 300;
   font-size: 2rem;
   font-family: "Inter", sans-serif;
-}
-
-.flat-home {
-  width: 100%;
-  height: auto;
 }
 
 .modal-login {
@@ -121,19 +129,6 @@ body {
   box-shadow: none !important;
 }
 
-.input-container > label {
-  height: 60px;
-  border-radius: 30px;
-  box-shadow: none !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.btn-categoria > .input-container {
-  width: 60%;
-}
-
 .input-icon {
   position: absolute;
   left: 15px;
@@ -144,7 +139,7 @@ body {
   border-radius: 30px;
   box-shadow: none !important;
   background-color: #0a2770;
-  color: white;
+  color: #133db1;
   font-weight: bold;
 }
 
@@ -153,8 +148,7 @@ body {
   border-radius: 30px;
   box-shadow: none !important;
   background-color: #0a1e53;
-  color: white;
-  font-weight: bold;
+  color: #133db1
 }
 
 .btn-cadastrar {
@@ -180,32 +174,4 @@ body {
   color: rgba(0, 0, 0, 0.53);
   font-weight: normal;
   font-size: 16px;
-}
-
-.btn-check + .btn-categoria{
-  width: 500px !important;
-  border-radius: 30px;
-  border-color: rgba(0, 0, 0, 0.50);
-  box-shadow: none !important;
-  color: rgb(0, 0, 0);
-}
-
-.btn-check:checked + .btn-categoria {
-  background-color: #0a1e53;
-  box-shadow: none !important;
-  color: rgb(255, 255, 255);
-  font-weight: bolder;
-}
-
-
-
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.down-footer {
-  background-color: #0a2770;
 }

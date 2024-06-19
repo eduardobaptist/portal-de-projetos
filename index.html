@@ -120,7 +120,12 @@
                       </button>
                     </div>
                     <div class="mb-3 input-container">
-                      <button type="button" class="btn btn-cadastrar w-100">
+                      <button 
+                      type="button" 
+                      class="btn btn-cadastrar w-100"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modal-cadastro"
+                      >
                         Cadastre-se
                       </button>
                     </div>
@@ -141,6 +146,70 @@
             </div>
           </div>
         </div>
+
+        <!-- Modal de Cadastro  -->
+        <div
+        class="modal fade modal-lg"
+        id="modal-cadastro"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modal-login"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content modal-login">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body ">
+                <div class="row w-100 d-flex justify-content-center" >
+                    
+                  <div class="col-6 btn-categoria d-flex justify-content-end">
+                    <div class="mb-3 input-container  ">
+                      <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
+                      <label class="btn btn-categoria w-100" for="success-outlined">Empresa</label>
+                    </div>
+                  </div>
+                  
+                  <div class="col-6 btn-categoria ">
+                    <div class="mb-3 input-container">
+                      <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
+                      <label class="btn btn-categoria w-100" for="danger-outlined">Instituição</label>
+                    </div>
+                  </div>
+
+              </div>
+              <hr>
+                
+                <div class="row mt-5 ">
+                  <div class="mb-3 input-container d-flex justify-content-center">
+                    <button 
+                    type="submit" 
+                    class="btn btn-entrar w-50"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal "
+                    >
+                      Próximo
+                    </button>
+                  </div>
+                  <div class="mb-3 input-container d-flex justify-content-center">
+                    <button 
+                    type="button" 
+                    class="btn btn-cadastrar w-50">
+                      Voltar
+                    </button>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       </header>
 
       <main class="bg-light">
