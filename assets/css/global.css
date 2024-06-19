@@ -16,10 +16,6 @@ body {
   /* max-height: 65%; */
 }
 
-span{
- color: #133db1;
-}
-
 /* .cabecalho img {
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
@@ -125,6 +121,19 @@ span{
   box-shadow: none !important;
 }
 
+.input-container > label {
+  height: 60px;
+  border-radius: 30px;
+  box-shadow: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-categoria > .input-container {
+  width: 60%;
+}
+
 .input-icon {
   position: absolute;
   left: 15px;
@@ -172,6 +181,24 @@ span{
   font-weight: normal;
   font-size: 16px;
 }
+
+.btn-check + .btn-categoria{
+  width: 500px !important;
+  border-radius: 30px;
+  border-color: rgba(0, 0, 0, 0.50);
+  box-shadow: none !important;
+  color: rgb(0, 0, 0);
+}
+
+.btn-check:checked + .btn-categoria {
+  background-color: #0a1e53;
+  box-shadow: none !important;
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+}
+
+
+
 
 .wrapper {
   display: flex;
