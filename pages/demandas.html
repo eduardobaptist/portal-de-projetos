@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portal de Projetos</title>
+    <link
+      rel="stylesheet"
+      href="../assets/bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  </head>
+  <body>
+    <div id="sidebar">
+      <div class="me-3" id="toggle-btn">
+          <i class="fa-solid fa-bars "></i>
+      </div>
+      <nav class="nav nav-items w-100">
+          <a class="nav-link text-start" href="#">
+            <i class="fa-solid fa-house"></i> Demandas
+          </a>
+          <a class="nav-link text-start" href="#">
+            <i class="fa-solid fa-user"></i> Conta
+          </a>
+          <a class="nav-link text-start" href="usuarios.html">
+            <i class="fa-solid fa-user-gear"></i> Usuários
+          </a>
+      </nav>
+      <nav class="nav nav-items w-100 mb-3"><a class="nav-link text-start bottom-item w-100" href="../index.html">
+          <i class="fa-solid fa-right-from-bracket"></i> Sair
+          </a>
+      </nav>
+    </div>
+
+    <div class="wrapper bg-light">
+      <header>
+        <!-- Navbar -->
+        <nav class="navbar cabecalho d-flex justify-content-center">
+            
+          <div class="container row">
+            <div class="col-12 logo-header">
+              <a class="" href="#">
+                <img
+                  src="../assets/img/gateway_logo_branco.png"
+                  class="d-inline-block align-top logo" 
+                  alt="gateway__"
+                />
+              </a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main class="bg-light container">
+        <div class="col-12 mt-5 d-flex align-items-center justify-content-between">
+          <h2 class="titulo-pagina me-3">Demandas</h2>
+          <button class="btn btn-novo btn-entrar d-flex align-items-center mt-1" data-bs-toggle="modal" data-bs-target="#modal-demanda">
+            <i class="fa-solid fa-plus me-2"></i>
+            <span>Novo</span>
+          </button>
+        </div>
+        <div class="d-flex align-items-center mt-3">
+            <div class="w-100">
+                <div class="input-container">
+                    <i class="input-icon fa-solid fa-magnifying-glass"></i>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="projetoBusca"
+                      aria-describedby="projetoBusca"
+                      placeholder="Pesquisa por nome"
+                    />
+                </div>
+            </div>
+            <div class="ms-2">
+              <div class="dropdown">
+                <i role="button" class="fa-solid fa-filter fa-xl dropdown-toggle" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                <ul class="dropdown-menu" aria-labelledby="filterDropdown">
+                  <li><a class="dropdown-item" href="#">Nome</a></li>
+                  <li><a class="dropdown-item" href="#">Classe</a></li>
+                  <li><a class="dropdown-item" href="#">Status</a></li>
+                  <li><a class="dropdown-item" href="#">Empresa</a></li>
+                  <li><a class="dropdown-item" href="#">Prioridade</a></li>
+                </ul>
+              </div>
+            </div>
+        </div>
+        <!-- <i class="fa-solid fa-2x fa-table-cells-large"></i>
+        <i class="fa-solid fa-2x fa-table-list"></i> -->
+        <hr>
+        <div class="w-100 d-flex justify-content-center">
+            <div id="demandas" class="row px-2 mt-3">
+               <!-- Projetos do objeto -->
+            </div>
+        </div>
+
+        <!-- Wizard de cadastro de projeto -->
+        <div
+          class="modal fade modal-lg"
+          id="modal-demanda"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="modal-demanda"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-login">
+              <div class="modal-header">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="d-flex justify-content-center w-100">
+                  <section class="signup-step-container">
+                    <div class="container">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-12">
+                                <div class="wizard">
+                                    <div class="wizard-inner">
+                                        <div class="connecting-line"></div>
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li role="presentation" class="active">
+                                                <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" aria-expanded="true"><span class="round-tab">1 </span> <i>Geral</i></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" aria-expanded="false"><span class="round-tab">2</span> <i>Métricas</i></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab"><span class="round-tab">3</span> <i>Impulso</i></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab"><span class="round-tab">4</span> <i>Edital</i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                    
+                                    <form role="form" class="login-box w-100">
+                                        <div class="tab-content" id="main_form">
+                                            <div class="tab-pane active" role="tabpanel" id="step1">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Título</label> 
+                                                            <input class="form-control" type="text" name="name" placeholder=""> 
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                          <label>Tipo</label> 
+                                                          <select name="country" class="form-control" id="country">
+                                                              <option value="NG" selected="selected">Trilha</option>
+                                                              <option value="NU">Projeto</option>
+                                                              <option value="NF">Desafio</option>
+                                                          </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                      <div class="form-group">
+                                                          <label>Descrição</label> 
+                                                          <textarea class="form-control" type="text" name="name" placeholder="" rows="4" cols="50"></textarea> 
+                                                      </div>
+                                                  </div>
+                                                </div>
+                                                <ul class="list-inline pull-right">
+                                                    <li>
+                                                      <button class="btn btn-novo btn-entrar d-flex align-items-center mt-1 next-step">
+                                                        <span>Continuar</span>
+                                                      </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step2">
+                                                <div class="row">
+                                                  <div class="col-md-12">
+                                                    <div class="form-group">
+                                                      <label>Nível TRL</label> 
+                                                      <select name="country" class="form-control" id="country">
+                                                          <option value="NG" selected="selected">1 - A teoria</option>
+                                                          <option value="NU">2 - O Protótipo</option>
+                                                          <option value="NF">3 - O MVP</option>
+                                                      </select>
+                                                    </div>
+                                                </div>
+                                                    <div class="col-md-12 mt-4">
+                                                        <div class="form-group">
+                                                          <label>Nível ACATECH</label> 
+                                                          <select name="country" class="form-control" id="country">
+                                                            <option value="NG" selected="selected">Nível 1: Computadorização</option>
+                                                            <option value="NU">Nível 2: Conectividade</option>
+                                                            <option value="NF">Nível 3: Visibilidade</option>
+                                                            <option value="NF">Nível 4: Transparência</option>
+                                                            <option value="NF">Nível 5: Capacidade preditiva</option>
+                                                            <option value="NF">Nível 6: Adaptabilidade</option>
+                                                        </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 mt-4">
+                                                      <div class="form-group">
+                                                        <label>Nível de urgência</label> 
+                                                        <select name="country" class="form-control" id="country">
+                                                          <option value="NG" selected="selected">Baixa</option>
+                                                          <option value="NU">Média</option>
+                                                          <option value="NF">Alta</option>
+                                                          <option value="NF">Urgente</option>
+                                                      </select>
+                                                      </div>
+                                                  </div>
+                                                    <!-- <div class="col-md-12">
+                                                      <div class="form-group">
+                                                          <label>Descrição</label> 
+                                                          <textarea class="form-control" type="text" name="name" placeholder="" rows="4" cols="50"></textarea> 
+                                                      </div>
+                                                  </div> -->
+                                                </div>
+                                                
+                                                
+                                                <ul class="list-inline pull-right">
+                                                    <li>
+                                                      <button type="button" class="btn btn-novo btn-entrar d-flex align-items-center mt-1 prev-step">
+                                                        <span>Anterior</span>
+                                                      </button>
+                                                    </li>
+                        
+                                                    <li>
+                                                      <button type="button" class="btn btn-novo btn-entrar d-flex align-items-center mt-1 next-step">
+                                                        <span>Continuar</span>
+                                                      </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step3">
+                                                <div class="row">
+                                                  <div class="col-12">
+                                                      <div class="form-group">
+                                                          <p>Esta demanda possui impulso acadêmico?</p> 
+                                                          <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                            <label class="form-check-label" for="inlineRadio1">Sim</label>
+                                                          </div>
+                                                          <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                            <label class="form-check-label" for="inlineRadio2">Não</label>
+                                                          </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <ul class="list-inline pull-right">
+                                                  <li>
+                                                    <button type="button" class="btn btn-novo btn-entrar d-flex align-items-center mt-1 prev-step">
+                                                      <span>Anterior</span>
+                                                    </button>
+                                                  </li>
+                      
+                                                  <li>
+                                                    <button type="button" class="btn btn-novo btn-entrar d-flex align-items-center mt-1 next-step">
+                                                      <span>Continuar</span>
+                                                    </button>
+                                                  </li>
+                                              </ul>
+                                            </div>
+                                            <div class="tab-pane d-fex justify-content-center" role="tabpanel" id="step4">
+                                              <div class="row">
+                                                <div class="col-md-6">
+                                                  <div class="form-group">
+                                                    <label>Selecione o PDF com mais informações</label>
+                                                    <div class="custom-file">
+                                                      <input type="file" class="custom-file-input" id="customFile">
+                                                      <label class="custom-file-label" for="customFile">Selecionar</label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <ul class="list-inline pull-right">
+                                                <li>
+                                                  <button type="button" class="btn btn-novo btn-entrar d-flex align-items-center mt-1 prev-step">
+                                                    <span>Anterior</span>
+                                                  </button>
+                                                </li>
+                    
+                                                <li>
+                                                  <button type="button" class="btn btn-novo btn-entrar d-flex align-items-center mt-1 next-step">
+                                                    <span>Finalizar</span>
+                                                  </button>
+                                                </li>
+                                            </ul>
+                                            </div>
+                                                          
+                                        
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>            
+                </div>
+              </div>  
+          </div>
+        </div>        
+      </main>
+      
+      <footer class="text-center mt-5 bg-light">
+        <hr>
+        <div class="container pt-4">
+          <section class="mb-4">
+            
+            <a
+              data-mdb-ripple-init
+              class="btn btn-link btn-floating btn-lg text-body m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+      
+            <a
+              data-mdb-ripple-init
+              class="btn btn-link btn-floating btn-lg text-body m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-twitter"></i
+            ></a>
+
+            <a
+              data-mdb-ripple-init
+              class="btn btn-link btn-floating btn-lg text-body m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-instagram"></i
+            ></a>
+      
+            <a
+              data-mdb-ripple-init
+              class="btn btn-link btn-floating btn-lg text-body m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+        </div>
+
+        <div class="text-center p-3 down-footer text-light">
+          © 2024 Copyright:
+          <a class="" href="#">Gateway</a>
+        </div>
+      </footer>  
+    </div>
+
+    <script src="../assets/bootstrap/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <script src="../assets/jquery/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/wizard-demanda.js"></script>
+    <script type="module" src="../assets/js/demandas.js"></script>
+  </body>
+</html>

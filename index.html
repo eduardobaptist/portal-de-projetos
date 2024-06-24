@@ -10,6 +10,9 @@
     />
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
     <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/custom-tabs.css">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
   </head>
   <body>
     <div class="wrapper bg-light">
@@ -18,9 +21,9 @@
         <nav class="navbar cabecalho d-flex justify-content-center">
           <div class="container row">
             <div class="col-6 d-flex justify-content-start">
-              <a class="" href="https://institutoagregar.org.br/pt">
+              <a class="" href="#">
                 <img
-                  src="/assets/img/gateway_logo_branco.png"
+                  src="assets/img/gateway_logo_branco.png"
                   class="d-inline-block align-top logo"
                   alt="gateway__"
                 />
@@ -29,16 +32,154 @@
             <div class="col-6 d-flex justify-content-end">
               <button
                 type="button"
-                class="btn btn-light btn-logar me-4"
+                class="btn btn-light btn-logar"
                 data-bs-toggle="modal"
                 data-bs-target="#modal-login"
               >
-                Entrar
+                <span>Entrar</span>
               </button>
             </div>
           </div>
         </nav>
+        <!-- Modal de Cadastro -->
+        <div
+          class="modal fade modal-lg"
+          id="modal-cadastro"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="modal-cadastro"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-login">
+              <div class="modal-header">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
 
+                <div class="d-flex justify-content-center">
+                  <form class="mt-5" action="index.html">
+                    <div class="d-flex justify-content-center">
+                      <h4>Insira seus dados</h4>
+                    </div>
+                    <div class="mb-3 input-container">
+                      <i class="fa-solid fa-id-card-clip input-icon"></i>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="userLogin"
+                        aria-describedby="login"
+                        placeholder="Nome do responsável"
+                      />
+                    </div>
+                    <div class="mb-3 input-container">
+                      <i class="fa-solid fa-envelope input-icon"></i>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="userLogin"
+                        aria-describedby="login"
+                        placeholder="E-mail"
+                      />
+                    </div>
+                    <div class="mb-3 input-container">
+                      <i class="input-icon fa-solid fa-user"></i>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="userLogin"
+                        aria-describedby="login"
+                        placeholder="Login"
+                      />
+                    </div>
+                    <div class="mb-3 input-container">
+                      <i class="input-icon fa-solid fa-lock"></i>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="userPassword"
+                        aria-describedby="password"
+                        placeholder="Senha"
+                      />
+                    </div>
+                    <div class="mb-3 input-container">
+                      <button type="submit" class="btn btn-entrar w-100" data-bs-dismiss="modal" aria-label="Close">
+                        Confirmar
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal de Categoria  -->
+        <div
+        class="modal fade modal-lg"
+        id="modal-categoria"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modal-login"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content modal-login">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body ">
+                <div class="row w-100 d-flex justify-content-center" >
+
+                  <div class="col-6 btn-categoria d-flex justify-content-end">
+                    <div class="mb-3 input-container  ">
+                      <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
+                      <label class="btn btn-categoria w-100" for="success-outlined">Empresa</label>
+                    </div>
+                  </div>
+
+                  <div class="col-6 btn-categoria ">
+                    <div class="mb-3 input-container">
+                      <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
+                      <label class="btn btn-categoria w-100" for="danger-outlined">Instituição</label>
+                    </div>
+                  </div>
+
+              </div>
+              <hr>
+
+                <div class="row mt-5 ">
+                  <div class="mb-3 input-container d-flex justify-content-center">
+                    <button 
+                    type="submit" 
+                    class="btn btn-entrar w-50"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-cadastro"
+                    >
+                      Próximo
+                    </button>
+                  </div>
+                  <div class="mb-3 input-container d-flex justify-content-center">
+                    <button 
+                    type="button" 
+                    class="btn btn-cadastrar w-50">
+                      Voltar
+                    </button>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
         <!-- Modal de Login -->
         <div
           class="modal fade modal-lg"
@@ -93,7 +234,7 @@
                 </div>
 
                 <div class="d-flex justify-content-center">
-                  <form class="mt-5">
+                  <form class="mt-5" action="pages/demandas.html">
                     <div class="mb-3 input-container">
                       <i class="input-icon fa-solid fa-user"></i>
                       <input
@@ -120,7 +261,12 @@
                       </button>
                     </div>
                     <div class="mb-3 input-container">
-                      <button type="button" class="btn btn-cadastrar w-100">
+                      <button 
+                      type="button" 
+                      class="btn btn-cadastrar w-100"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modal-categoria"
+                      >
                         Cadastre-se
                       </button>
                     </div>
@@ -171,7 +317,7 @@
                     aria-expanded="true"
                     aria-controls="collapseUm"
                   >
-                    <span class="texto-info">O Portal de Projetos é...</span>
+                    <span class="texto-info">O que é o Gateway?</span>
                   </button>
                 </h2>
                 <div
@@ -181,7 +327,7 @@
                   data-bs-parent="#accordionHome"
                 >
                   <div class="accordion-body">
-                    O |Portal de Projetos| é um instrumento que visa unir as demandas das empresas à instituições que possam supri-las
+                    O Gateway é um instrumento que visa unir as demandas das empresas à instituições que possam supri-las
                   </div>
                 </div>
               </div>
@@ -198,7 +344,7 @@
                     aria-controls="collapseDois"
                   >
                     <span class="texto-info">
-                      Você conhece os níveis de maturidade da produção de projetos?
+                      Os níveis de maturidade da produção de projetos
                     </span>
                   </button>
                 </h2>
@@ -213,7 +359,7 @@
                       <strong>Technology Readiness Level</strong> é uma forma de caracterizar o nível de desenvolvimento de uma tecnologia, partindo da pesquisa teórica dos processos e evoluindo até a construção de um Produto Mínimo Viável.
                     </p>
                     <p>
-                      O <strong>[portal de projetos]</strong> utiliza níveis simplificados da TRL para auxiliar a compreensão do usuário ao que está sendo requirido pelas empresas. Resumimos os processos a três grandes níveis:
+                      O <strong>Gateway</strong> utiliza níveis simplificados da TRL para auxiliar a compreensão do usuário ao que está sendo requirido pelas empresas. Resumimos os processos a três grandes níveis:
                     </p>
                     <p>
                       <strong>1. A Teoria</strong> - abordando as documentações e teorias que aprovam e demonstram a viabilidade da tecnologia.
@@ -240,7 +386,7 @@
                     aria-controls="collapseTres"
                   >
                     <span class="texto-info">
-                      O Índice de maturidade (ACATECH)
+                      O Índice ACATECH
                     </span>
                   </button>
                 </h2>
@@ -319,6 +465,7 @@
         <div class="text-center p-3 down-footer text-light">
           © 2024 Copyright:
           <a class="" href="#">Gateway</a>
+        </div>
       </footer>  
     </div>
 
