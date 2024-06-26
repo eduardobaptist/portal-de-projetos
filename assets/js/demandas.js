@@ -29,6 +29,7 @@ $("document").ready(() => {
             </div>
           </div>
           <p class="card-text">${demanda.descricao}</p>
+          <a data-bs-toggle="modal" data-bs-target="#modal-view" href="#" class="text-light"><i class="fa-solid fa-arrow-up-right-from-square fa-xl"></i></a>
           <div class="footer-card d-flex justify-content-between">
             <div>
               <p><strong>Classe:</strong> ${demanda.classe}</p>
@@ -48,6 +49,7 @@ $("document").ready(() => {
     // LISTA
     var lista = `
       <tr>    
+        <td><a data-bs-toggle="modal" data-bs-target="#modal-view" href="#" class="text-primary"><i class="fa-solid fa-arrow-up-right-from-square fa-lg"></i></a></td>
         <td>${demanda.nome}</td>
         <td>${demanda.classe}</td>
         <td>${demanda.prioridade}</td>
