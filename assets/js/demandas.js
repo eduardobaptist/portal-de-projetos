@@ -1,9 +1,11 @@
 import * as demandas from "./demandasObj.js";
 
-var demandasDiv = document.getElementById("demandas");
+var demandasCards = document.getElementById("demandas-cards");
+var demandasLista = document.getElementById("demandas-lista");
 
 $("document").ready(() => {
   demandas.demandas.forEach((demanda) => {
+    // CARD
     var card = `
     <div class="col-sm-1 col-md-6 d-flex justify-content-center">
       <div class="card mb-4 text-light">
@@ -30,7 +32,7 @@ $("document").ready(() => {
           <div class="footer-card d-flex justify-content-between">
             <div>
               <p><strong>Classe:</strong> ${demanda.classe}</p>
-              <p><strong>Prioridade:</strong> ${demanda.prioridade}</p>
+              <p><strong>Urgência:</strong> ${demanda.prioridade}</p>
             </div>
             <div class="mt-0 p-0">
               <p><strong>Status:</strong> ${demanda.status}</p>
@@ -41,6 +43,23 @@ $("document").ready(() => {
       </div>
     </div>`;
 
-    demandasDiv.insertAdjacentHTML("beforeend", card);
+    demandasCards.insertAdjacentHTML("beforeend", card);
+    
+    // LISTA
+    var lista = `
+      <tr>    
+        <td>${demanda.nome}</td>
+        <td>${demanda.classe}</td>
+        <td>${demanda.prioridade}</td>
+        <td>${
+          demanda.incentivo
+            ? '<i class="fa-solid fa-check me-2 text-success fa-lg"></i>'
+            : '<i class="fa-solid fa-xmark text-danger fa-lg"></i>'
+        }</td>
+        <td>${demanda.status}</td>
+      </tr>
+    `
+    demandasLista.insertAdjacentHTML("beforeend", lista);
+
   });
 });

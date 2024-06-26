@@ -542,8 +542,16 @@ span.round-tab i{
     float: right;
 }
 
-.nav-item {
-  color:#000 !important;
+.nav-item-custom > .active {
+  color: white !important;
+  font-weight: 700;
+  background-color: #0a2770 !important;
+  font-size: 1.0rem;
+}
+
+.nav-item-custom > :not(.active) {
+  background-color: white !important;
+  color: black !important;
 }
 
 /*-----------custom-checkbox-----------*/

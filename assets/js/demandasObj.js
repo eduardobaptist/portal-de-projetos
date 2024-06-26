@@ -1,39 +1,5 @@
 export var demandas = [
   {
-    nome: "Modelagem UML",
-    empresa: "Bruning Tecnometal",
-    areaConhecimento: "Eng. de Software",
-    prioridade: "Urgente",
-    criadoEm: new Date().toLocaleDateString("pt-PT", {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    }),
-    descricao:
-      "Lorem ipsum dolor sit amet. Hic possimus velit sit suscipit dolorem non voluptatem officia rem sunt quod.",
-    incentivo: false,
-    logoUrl: "../assets/img/logo-bruning.png",
-    classe: "Rota",
-    status: "Em execução",
-  },
-  {
-    nome: "Documentação de API",
-    empresa: "Bruning Tecnometal",
-    areaConhecimento: "Desenvolvimento Web",
-    prioridade: "Alta",
-    criadoEm: new Date().toLocaleDateString("pt-PT", {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    }),
-    descricao:
-      "Lorem ipsum dolor sit amet. Hic possimus velit sit suscipit dolorem non voluptatem officia rem sunt quod.",
-    incentivo: true,
-    logoUrl: "../assets/img/logo-bruning.png",
-    classe: "Projeto",
-    status: "Aberto",
-  },
-  {
     nome: "Revisão de Código",
     empresa: "Bruning Tecnometal",
     areaConhecimento: "Eng. de Software",
@@ -51,7 +17,7 @@ export var demandas = [
     status: "Finalizado",
   },
   {
-    nome: "Teste de Unitário",
+    nome: "Testes Unitários",
     empresa: "Bruning Tecnometal",
     areaConhecimento: "QA",
     prioridade: "Baixa",
@@ -71,7 +37,7 @@ export var demandas = [
     nome: "Design de Interface",
     empresa: "Bruning Tecnometal",
     areaConhecimento: "Design",
-    prioridade: "Urgente",
+    prioridade: "Alta",
     criadoEm: new Date().toLocaleDateString("pt-PT", {
       year: "numeric",
       month: "short",
@@ -139,7 +105,7 @@ export var demandas = [
     nome: "Banco de Dados para Projeto",
     empresa: "Bruning Tecnometal",
     areaConhecimento: "Banco de Dados",
-    prioridade: "Urgente",
+    prioridade: "Alta",
     criadoEm: new Date().toLocaleDateString("pt-PT", {
       year: "numeric",
       month: "short",
@@ -207,7 +173,7 @@ export var demandas = [
     nome: "Desenvolvimento de Backend",
     empresa: "Bruning Tecnometal",
     areaConhecimento: "Desenvolvimento Web",
-    prioridade: "Urgente",
+    prioridade: "Alta",
     criadoEm: new Date().toLocaleDateString("pt-PT", {
       year: "numeric",
       month: "short",
@@ -275,7 +241,7 @@ export var demandas = [
     nome: "Treinamento de Equipe",
     empresa: "Bruning Tecnometal",
     areaConhecimento: "Recursos Humanos",
-    prioridade: "Urgente",
+    prioridade: "Alta",
     criadoEm: new Date().toLocaleDateString("pt-PT", {
       year: "numeric",
       month: "short",
